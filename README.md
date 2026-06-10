@@ -1,9 +1,7 @@
+RaioX Técnico, caso spotify:
+A arquitetura e stack tecnológica:
 
-
-
-
-
-RaioX:
+Para suportar o processamento do histórico de mais de 500 milhões de usuários ativos, a arquitetura do Spotify é dividida em três grandes camadas: Engenharia de Dados (Batch), Persistência Escalável e Camada de Entrega (Low Latency).
 
 Markdown:
 #### Fluxo de Dados e Componentes da Stack:
