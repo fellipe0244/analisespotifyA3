@@ -58,6 +58,10 @@ Em seguida, algoritmos de recomendação analisam relações entre usuários e m
 Após o cálculo, o sistema seleciona um conjunto reduzido de músicas candidatas e aplica filtros, como remover músicas já ouvidas pelo usuário, evitar repetições excessivas e equilibrar novidade com familiaridade.
 Por fim, as playlists prontas são armazenadas em bancos escaláveis e disponibilizadas em cache. Assim, quando o usuário abre o aplicativo, o Spotify não precisa recalcular tudo em tempo real. Ele apenas entrega uma playlist previamente calculada, garantindo baixa latência e boa experiência.
 
-
+Referencias:
+[Ref.1](https://engineering.atspotify.com/2017/10/big-data-processing-at-spotify-the-road-to-scio-part-1).
+[Ref.2](https://engineering.atspotify.com/2015/1/personalization-at-spotify-using-cassandra)
+[Ref.3](https://planetcassandra.org/usecases/spotify/391/?utm_source=chatgpt.com)
+[Ref.4](https://planetcassandra.org/usecases/spotify/391/?utm_source=chatgpt.com)
 
 
