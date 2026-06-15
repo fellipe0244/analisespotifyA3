@@ -24,7 +24,7 @@ Markdown:
 | :--- | :--- | :--- | :--- |
 | **Scala / Spark** | Processamento Batch | Altíssima performance para computação paralela de matrizes. | Custo computacional elevado e delay de processamento (não é tempo real). |
 | **Cassandra** | Banco de Dados NoSQL | Escalabilidade linear e tolerância a falhas global. | Consistência eventual (pode demorar alguns segundos para replicar globalmente). |
-| **Cache (Memória)**| Entrega da Playlist | Latência incrivelmente baixa ($O(1)$) para o usuário final. | Custo alto de memória RAM; dados são voláteis. |
+| **Cache (Memória)**| Entrega da Playlist | Latência incrivelmente baixa O(1) para o usuário final. | Custo alto de memória RAM; dados são voláteis. |
 
 
 ## Problema computacional envolvido:
