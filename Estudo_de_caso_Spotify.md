@@ -25,3 +25,39 @@ Markdown:
 | **Scala / Spark** | Processamento Batch | Altíssima performance para computação paralela de matrizes. | Custo computacional elevado e delay de processamento (não é tempo real). |
 | **Cassandra** | Banco de Dados NoSQL | Escalabilidade linear e tolerância a falhas global. | Consistência eventual (pode demorar alguns segundos para replicar globalmente). |
 | **Cache (Memória)**| Entrega da Playlist | Latência incrivelmente baixa ($O(1)$) para o usuário final. | Custo alto de memória RAM; dados são voláteis. |
+
+
+## Problema computacional envolvido:
+O principal problema computacional do Spotify, no caso da playlist Descobertas da Semana, é transformar um volume gigantesco de dados de audição em recomendações personalizadas para cada usuário.
+A dificuldade está no tamanho e na complexidade dos dados. O Spotify precisa analisar músicas ouvidas, artistas, gêneros, tempo de reprodução, músicas puladas, curtidas, playlists salvas e padrões de usuários semelhantes. Esse processamento envolve centenas de milhões de usuários e milhões de faixas disponíveis.
+
+Do ponto de vista algorítmico, o problema é difícil porque não basta encontrar músicas populares. É necessário encontrar músicas que o usuário ainda não ouviu, mas que tenham alta probabilidade de agradá-lo. Isso exige comparação entre perfis de usuários, músicas semelhantes e padrões de comportamento.
+A complexidade cresce rapidamente, pois comparar todos os usuários com todos os usuários, ou todas as músicas com todas as músicas, seria inviável computacionalmente. Por isso, a solução precisa usar processamento distribuído, redução de dados, vetores de características, filtragem e heurísticas para tornar o problema viável em escala.
+
+## Classificação conceitual do problema:
+O problema se aproxima principalmente de um problema de recomendação e otimização.
+Ele não é um problema clássico de roteamento ou caminho mínimo, como ocorre no Google Maps ou no Waze. Também não é tratado como um problema NP-Completo formal no contexto do trabalho. A dificuldade principal está na escala dos dados e na necessidade de gerar uma solução boa o suficiente em tempo viável.
+
+Conceitualmente, pode ser entendido como um problema de:
+
+* **Recomendação: escolher músicas relevantes para cada usuário.** *
+* **Busca: encontrar candidatos adequados dentro de um catálogo muito grande.** *
+* **Otimização: selecionar as 30 melhores músicas entre milhares de possibilidades.** *
+* **Escalabilidade: processar dados de milhões de usuários sem queda de desempenho.** *
+* **Aproximação/heurística: buscar uma recomendação muito boa, mesmo que não seja matematicamente perfeita.** *
+
+Na prática, o objetivo não é encontrar a “playlist perfeita”, mas sim uma playlist suficientemente boa para aumentar engajamento, retenção e satisfação do usuário.
+
+
+## Estrategia utilizado pela empresa:
+
+A estratégia utilizada pelo Spotify combina Big Data, Machine Learning, processamento distribuído, cache e heurísticas de recomendação.
+Primeiro, os dados de audição dos usuários são coletados continuamente. Depois, esses dados são processados em lote por ferramentas como Spark e Hadoop, permitindo distribuir o trabalho entre várias máquinas.
+Em seguida, algoritmos de recomendação analisam relações entre usuários e músicas. Um exemplo é a filtragem colaborativa, que identifica usuários com gostos parecidos e recomenda músicas que pessoas semelhantes ouviram. Também podem ser usados vetores de características, nos quais usuários e músicas são representados matematicamente para facilitar comparações.
+
+Após o cálculo, o sistema seleciona um conjunto reduzido de músicas candidatas e aplica filtros, como remover músicas já ouvidas pelo usuário, evitar repetições excessivas e equilibrar novidade com familiaridade.
+Por fim, as playlists prontas são armazenadas em bancos escaláveis e disponibilizadas em cache. Assim, quando o usuário abre o aplicativo, o Spotify não precisa recalcular tudo em tempo real. Ele apenas entrega uma playlist previamente calculada, garantindo baixa latência e boa experiência.
+
+
+
+
