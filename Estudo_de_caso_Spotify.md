@@ -61,7 +61,21 @@ Por fim, as playlists prontas são armazenadas em bancos escaláveis e disponibi
 Referencias:
 [Ref.1](https://engineering.atspotify.com/2017/10/big-data-processing-at-spotify-the-road-to-scio-part-1).
 [Ref.2](https://engineering.atspotify.com/2015/1/personalization-at-spotify-using-cassandra)
-[Ref.3](https://planetcassandra.org/usecases/spotify/391/?utm_source=chatgpt.com)
-[Ref.4](https://planetcassandra.org/usecases/spotify/391/?utm_source=chatgpt.com)
+[Ref.3](https://planetcassandra.org/usecases/spotify/391/)
+[Ref.4](https://planetcassandra.org/usecases/spotify/391/)
 
+Referencias:
+[Ref.5](https://www.researchgate.net/publication/318511102_Recommender_System_Based_on_Collaborative_Filtering_for_Spotify's_Users).
+[Ref.6](https://www.vox.com/even-better/404896/spotify-youtube-apple-music-amazon-playlists).
+[Ref.7](https://arxiv.org/abs/2102.12369).
 
+Referencias:
+[Ref.8](https://arxiv.org/abs/1804.08891).
+[Ref.9](https://arxiv.org/abs/2008.11432).
+[Ref.10](https://arxiv.org/abs/2203.00376).
+
+Referencias:
+[Ref.11](https://www.researchgate.net/publication/318511102_Recommender_System_Based_on_Collaborative_Filtering_for_Spotify's_Users).
+[Ref.12](https://www.wired.com/beyond-the-beyond/2017/10/musica-globalista-spotify-discovery-engine)
+[Ref.13](https://music-tomorrow.com/blog/how-spotify-recommendation-system-works-complete-guide)
+[Ref.14](https://engineering.atspotify.com/2017/10/big-data-processing-at-spotify-the-road-to-scio-part-1)
